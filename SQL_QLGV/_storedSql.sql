@@ -255,10 +255,10 @@ GO
 IF EXISTS (SELECT * FROM sys.objects WHERE type = 'P' AND name = 'gen_SUBJECT_CLASS_insert')
     DROP PROCEDURE [gen_SUBJECT_CLASS_insert]
 GO 
-CREATE PROCEDURE [gen_SUBJECT_CLASS_insert](  @code Varchar(10),   @codeview Varchar(20),   @name Nvarchar(200),   @note Nvarchar(200),   @lastedituser Varchar(20),   @lastedittime Datetime,   @lock smallint,   @lockdate datetime,   @theorder int,   @numberof int,   @subjectcode varchar(10),   @yearstart date,   @yearend date,   @edubranchcode Varchar(10),   @Semester int,   @yearstart int)
+CREATE PROCEDURE [gen_SUBJECT_CLASS_insert](  @code Varchar(10),   @codeview Varchar(20),   @name Nvarchar(200),   @note Nvarchar(200),   @lastedituser Varchar(20),   @lastedittime Datetime,   @lock smallint,   @lockdate datetime,   @theorder int,   @numberof int,   @subjectcode varchar(10),   @start date,   @end date,   @edubranchcode Varchar(10),   @Semester int,   @yearstart int)
 AS 
 BEGIN
-	INSERT INTO [SUBJECT_CLASS]([code], [codeview], [name], [note], [lastedituser], [lastedittime], [lock], [lockdate], [theorder], [numberof], [subjectcode], [yearstart], [yearend], [edubranchcode], [Semester], [yearstart]) VALUES(@code, @codeview, @name, @note, @lastedituser, @lastedittime, @lock, @lockdate, @theorder, @numberof, @subjectcode, @yearstart, @yearend, @edubranchcode, @Semester, @yearstart)
+	INSERT INTO [SUBJECT_CLASS]([code], [codeview], [name], [note], [lastedituser], [lastedittime], [lock], [lockdate], [theorder], [numberof], [subjectcode], [start], [end], [edubranchcode], [Semester], [yearstart]) VALUES(@code, @codeview, @name, @note, @lastedituser, @lastedittime, @lock, @lockdate, @theorder, @numberof, @subjectcode, @start, @end, @edubranchcode, @Semester, @yearstart)
 END
 -----------------end SUBJECT_CLASS_insert--------------------
 GO
@@ -267,10 +267,10 @@ GO
 IF EXISTS (SELECT * FROM sys.objects WHERE type = 'P' AND name = 'gen_SUBJECT_CLASS_update')
     DROP PROCEDURE [gen_SUBJECT_CLASS_update]
 GO 
-CREATE PROCEDURE [gen_SUBJECT_CLASS_update](@code Varchar(10), @codeview Varchar(20), @name Nvarchar(200), @note Nvarchar(200), @lastedituser Varchar(20), @lastedittime Datetime, @lock smallint, @lockdate datetime, @theorder int, @numberof int, @subjectcode varchar(10), @yearstart date, @yearend date, @edubranchcode Varchar(10), @Semester int, @yearstart int, @Key_code Varchar(10))
+CREATE PROCEDURE [gen_SUBJECT_CLASS_update](@code Varchar(10), @codeview Varchar(20), @name Nvarchar(200), @note Nvarchar(200), @lastedituser Varchar(20), @lastedittime Datetime, @lock smallint, @lockdate datetime, @theorder int, @numberof int, @subjectcode varchar(10), @start date, @end date, @edubranchcode Varchar(10), @Semester int, @yearstart int, @Key_code Varchar(10))
 AS 
 BEGIN
-	UPDATE [SUBJECT_CLASS] SET [code] =@code, [codeview] =@codeview, [name] =@name, [note] =@note, [lastedituser] =@lastedituser, [lastedittime] =@lastedittime, [lock] =@lock, [lockdate] =@lockdate, [theorder] =@theorder, [numberof] =@numberof, [subjectcode] =@subjectcode, [yearstart] =@yearstart, [yearend] =@yearend, [edubranchcode] =@edubranchcode, [Semester] =@Semester, [yearstart] =@yearstart WHERE [code] =@Key_code
+	UPDATE [SUBJECT_CLASS] SET [code] =@code, [codeview] =@codeview, [name] =@name, [note] =@note, [lastedituser] =@lastedituser, [lastedittime] =@lastedittime, [lock] =@lock, [lockdate] =@lockdate, [theorder] =@theorder, [numberof] =@numberof, [subjectcode] =@subjectcode, [start] =@start, [end] =@end, [edubranchcode] =@edubranchcode, [Semester] =@Semester, [yearstart] =@yearstart WHERE [code] =@Key_code
 END
 -----------------end SUBJECT_CLASS_update--------------------
 GO
@@ -1227,7 +1227,7 @@ GO
 IF EXISTS (SELECT * FROM sys.objects WHERE type = 'P' AND name = 'gen_DT_DEGREE_insert')
     DROP PROCEDURE [gen_DT_DEGREE_insert]
 GO 
-CREATE PROCEDURE [gen_DT_DEGREE_insert](  @code Varchar(10),   @codeview Varchar(20),   @name Nvarchar(200),   @note Nvarchar(200),   @lastedituser Varchar(20),   @lastedittime Datetime,   @lock smallint,   @lockdate datetime,   @theorder int,   @degreecode varchar(10),   @teachercode varchar(10),   @place Nvarchaer(1000),   @time date)
+CREATE PROCEDURE [gen_DT_DEGREE_insert](  @code Varchar(10),   @codeview Varchar(20),   @name Nvarchar(200),   @note Nvarchar(200),   @lastedituser Varchar(20),   @lastedittime Datetime,   @lock smallint,   @lockdate datetime,   @theorder int,   @degreecode varchar(10),   @teachercode varchar(10),   @place Nvarchar(1000),   @time date)
 AS 
 BEGIN
 	INSERT INTO [DT_DEGREE]([code], [codeview], [name], [note], [lastedituser], [lastedittime], [lock], [lockdate], [theorder], [degreecode], [teachercode], [place], [time]) VALUES(@code, @codeview, @name, @note, @lastedituser, @lastedittime, @lock, @lockdate, @theorder, @degreecode, @teachercode, @place, @time)
@@ -1239,7 +1239,7 @@ GO
 IF EXISTS (SELECT * FROM sys.objects WHERE type = 'P' AND name = 'gen_DT_DEGREE_update')
     DROP PROCEDURE [gen_DT_DEGREE_update]
 GO 
-CREATE PROCEDURE [gen_DT_DEGREE_update](@code Varchar(10), @codeview Varchar(20), @name Nvarchar(200), @note Nvarchar(200), @lastedituser Varchar(20), @lastedittime Datetime, @lock smallint, @lockdate datetime, @theorder int, @degreecode varchar(10), @teachercode varchar(10), @place Nvarchaer(1000), @time date, @Key_code Varchar(10))
+CREATE PROCEDURE [gen_DT_DEGREE_update](@code Varchar(10), @codeview Varchar(20), @name Nvarchar(200), @note Nvarchar(200), @lastedituser Varchar(20), @lastedittime Datetime, @lock smallint, @lockdate datetime, @theorder int, @degreecode varchar(10), @teachercode varchar(10), @place Nvarchar(1000), @time date, @Key_code Varchar(10))
 AS 
 BEGIN
 	UPDATE [DT_DEGREE] SET [code] =@code, [codeview] =@codeview, [name] =@name, [note] =@note, [lastedituser] =@lastedituser, [lastedittime] =@lastedittime, [lock] =@lock, [lockdate] =@lockdate, [theorder] =@theorder, [degreecode] =@degreecode, [teachercode] =@teachercode, [place] =@place, [time] =@time WHERE [code] =@Key_code
@@ -1299,7 +1299,7 @@ GO
 IF EXISTS (SELECT * FROM sys.objects WHERE type = 'P' AND name = 'gen_DT_PARTY_POST_insert')
     DROP PROCEDURE [gen_DT_PARTY_POST_insert]
 GO 
-CREATE PROCEDURE [gen_DT_PARTY_POST_insert](  @code Varchar(10),   @codeview Varchar(20),   @name Nvarchar(200),   @note Nvarchar(200),   @lastedituser Varchar(20),   @lastedittime Datetime,   @lock smallint,   @lockdate datetime,   @theorder int,   @Partypostcode varchar(10),   @teachercode varchar(10),   @place Nvarchaer(1000),   @start date,   @end date,   @facultycode Varchar(10),   @departmentcode Varchar(10),   @tenure Nvarchar(50))
+CREATE PROCEDURE [gen_DT_PARTY_POST_insert](  @code Varchar(10),   @codeview Varchar(20),   @name Nvarchar(200),   @note Nvarchar(200),   @lastedituser Varchar(20),   @lastedittime Datetime,   @lock smallint,   @lockdate datetime,   @theorder int,   @Partypostcode varchar(10),   @teachercode varchar(10),   @place Nvarchar(1000),   @start date,   @end date,   @facultycode Varchar(10),   @departmentcode Varchar(10),   @tenure Nvarchar(50))
 AS 
 BEGIN
 	INSERT INTO [DT_PARTY_POST]([code], [codeview], [name], [note], [lastedituser], [lastedittime], [lock], [lockdate], [theorder], [Partypostcode], [teachercode], [place], [start], [end], [facultycode], [departmentcode], [tenure]) VALUES(@code, @codeview, @name, @note, @lastedituser, @lastedittime, @lock, @lockdate, @theorder, @Partypostcode, @teachercode, @place, @start, @end, @facultycode, @departmentcode, @tenure)
@@ -1311,7 +1311,7 @@ GO
 IF EXISTS (SELECT * FROM sys.objects WHERE type = 'P' AND name = 'gen_DT_PARTY_POST_update')
     DROP PROCEDURE [gen_DT_PARTY_POST_update]
 GO 
-CREATE PROCEDURE [gen_DT_PARTY_POST_update](@code Varchar(10), @codeview Varchar(20), @name Nvarchar(200), @note Nvarchar(200), @lastedituser Varchar(20), @lastedittime Datetime, @lock smallint, @lockdate datetime, @theorder int, @Partypostcode varchar(10), @teachercode varchar(10), @place Nvarchaer(1000), @start date, @end date, @facultycode Varchar(10), @departmentcode Varchar(10), @tenure Nvarchar(50), @Key_code Varchar(10))
+CREATE PROCEDURE [gen_DT_PARTY_POST_update](@code Varchar(10), @codeview Varchar(20), @name Nvarchar(200), @note Nvarchar(200), @lastedituser Varchar(20), @lastedittime Datetime, @lock smallint, @lockdate datetime, @theorder int, @Partypostcode varchar(10), @teachercode varchar(10), @place Nvarchar(1000), @start date, @end date, @facultycode Varchar(10), @departmentcode Varchar(10), @tenure Nvarchar(50), @Key_code Varchar(10))
 AS 
 BEGIN
 	UPDATE [DT_PARTY_POST] SET [code] =@code, [codeview] =@codeview, [name] =@name, [note] =@note, [lastedituser] =@lastedituser, [lastedittime] =@lastedittime, [lock] =@lock, [lockdate] =@lockdate, [theorder] =@theorder, [Partypostcode] =@Partypostcode, [teachercode] =@teachercode, [place] =@place, [start] =@start, [end] =@end, [facultycode] =@facultycode, [departmentcode] =@departmentcode, [tenure] =@tenure WHERE [code] =@Key_code
@@ -1371,7 +1371,7 @@ GO
 IF EXISTS (SELECT * FROM sys.objects WHERE type = 'P' AND name = 'gen_DT_ADMINISTRATIVE_POST_insert')
     DROP PROCEDURE [gen_DT_ADMINISTRATIVE_POST_insert]
 GO 
-CREATE PROCEDURE [gen_DT_ADMINISTRATIVE_POST_insert](  @code Varchar(10),   @codeview Varchar(20),   @name Nvarchar(200),   @note Nvarchar(200),   @lastedituser Varchar(20),   @lastedittime Datetime,   @lock smallint,   @lockdate datetime,   @theorder int,   @Administrativepostcode varchar(10),   @teachercode varchar(10),   @place Nvarchaer(1000),   @start date,   @end date,   @facultycode Varchar(10),   @departmentcode Varchar(10),   @tenure Nvarchar(50))
+CREATE PROCEDURE [gen_DT_ADMINISTRATIVE_POST_insert](  @code Varchar(10),   @codeview Varchar(20),   @name Nvarchar(200),   @note Nvarchar(200),   @lastedituser Varchar(20),   @lastedittime Datetime,   @lock smallint,   @lockdate datetime,   @theorder int,   @Administrativepostcode varchar(10),   @teachercode varchar(10),   @place Nvarchar(1000),   @start date,   @end date,   @facultycode Varchar(10),   @departmentcode Varchar(10),   @tenure Nvarchar(50))
 AS 
 BEGIN
 	INSERT INTO [DT_ADMINISTRATIVE_POST]([code], [codeview], [name], [note], [lastedituser], [lastedittime], [lock], [lockdate], [theorder], [Administrativepostcode], [teachercode], [place], [start], [end], [facultycode], [departmentcode], [tenure]) VALUES(@code, @codeview, @name, @note, @lastedituser, @lastedittime, @lock, @lockdate, @theorder, @Administrativepostcode, @teachercode, @place, @start, @end, @facultycode, @departmentcode, @tenure)
@@ -1383,7 +1383,7 @@ GO
 IF EXISTS (SELECT * FROM sys.objects WHERE type = 'P' AND name = 'gen_DT_ADMINISTRATIVE_POST_update')
     DROP PROCEDURE [gen_DT_ADMINISTRATIVE_POST_update]
 GO 
-CREATE PROCEDURE [gen_DT_ADMINISTRATIVE_POST_update](@code Varchar(10), @codeview Varchar(20), @name Nvarchar(200), @note Nvarchar(200), @lastedituser Varchar(20), @lastedittime Datetime, @lock smallint, @lockdate datetime, @theorder int, @Administrativepostcode varchar(10), @teachercode varchar(10), @place Nvarchaer(1000), @start date, @end date, @facultycode Varchar(10), @departmentcode Varchar(10), @tenure Nvarchar(50), @Key_code Varchar(10))
+CREATE PROCEDURE [gen_DT_ADMINISTRATIVE_POST_update](@code Varchar(10), @codeview Varchar(20), @name Nvarchar(200), @note Nvarchar(200), @lastedituser Varchar(20), @lastedittime Datetime, @lock smallint, @lockdate datetime, @theorder int, @Administrativepostcode varchar(10), @teachercode varchar(10), @place Nvarchar(1000), @start date, @end date, @facultycode Varchar(10), @departmentcode Varchar(10), @tenure Nvarchar(50), @Key_code Varchar(10))
 AS 
 BEGIN
 	UPDATE [DT_ADMINISTRATIVE_POST] SET [code] =@code, [codeview] =@codeview, [name] =@name, [note] =@note, [lastedituser] =@lastedituser, [lastedittime] =@lastedittime, [lock] =@lock, [lockdate] =@lockdate, [theorder] =@theorder, [Administrativepostcode] =@Administrativepostcode, [teachercode] =@teachercode, [place] =@place, [start] =@start, [end] =@end, [facultycode] =@facultycode, [departmentcode] =@departmentcode, [tenure] =@tenure WHERE [code] =@Key_code
@@ -1659,10 +1659,10 @@ GO
 IF EXISTS (SELECT * FROM sys.objects WHERE type = 'P' AND name = 'gen_APPLIED_TECH_PRODUCT_insert')
     DROP PROCEDURE [gen_APPLIED_TECH_PRODUCT_insert]
 GO 
-CREATE PROCEDURE [gen_APPLIED_TECH_PRODUCT_insert](  @code Varchar(10),   @codeview Varchar(20),   @name Nvarchar(200),   @note Nvarchar(200),   @lastedituser Varchar(20),   @lastedittime Datetime,   @lock smallint,   @lockdate datetime,   @theorder int,   @teachercode Varchar(10),   @Palce Nvachar(1000),   @time date,   @Appliedscale Nvachar(1000),   @eficiency Nvachar(1000))
+CREATE PROCEDURE [gen_APPLIED_TECH_PRODUCT_insert](  @code Varchar(10),   @codeview Varchar(20),   @name Nvarchar(200),   @note Nvarchar(200),   @lastedituser Varchar(20),   @lastedittime Datetime,   @lock smallint,   @lockdate datetime,   @theorder int,   @teachercode Varchar(10),   @place Nvarchar(1000),   @time date,   @Appliedscale Nvarchar(1000),   @eficiency Nvarchar(1000))
 AS 
 BEGIN
-	INSERT INTO [APPLIED_TECH_PRODUCT]([code], [codeview], [name], [note], [lastedituser], [lastedittime], [lock], [lockdate], [theorder], [teachercode], [Palce], [time], [Appliedscale], [eficiency]) VALUES(@code, @codeview, @name, @note, @lastedituser, @lastedittime, @lock, @lockdate, @theorder, @teachercode, @Palce, @time, @Appliedscale, @eficiency)
+	INSERT INTO [APPLIED_TECH_PRODUCT]([code], [codeview], [name], [note], [lastedituser], [lastedittime], [lock], [lockdate], [theorder], [teachercode], [place], [time], [Appliedscale], [eficiency]) VALUES(@code, @codeview, @name, @note, @lastedituser, @lastedittime, @lock, @lockdate, @theorder, @teachercode, @place, @time, @Appliedscale, @eficiency)
 END
 -----------------end APPLIED_TECH_PRODUCT_insert--------------------
 GO
@@ -1671,10 +1671,10 @@ GO
 IF EXISTS (SELECT * FROM sys.objects WHERE type = 'P' AND name = 'gen_APPLIED_TECH_PRODUCT_update')
     DROP PROCEDURE [gen_APPLIED_TECH_PRODUCT_update]
 GO 
-CREATE PROCEDURE [gen_APPLIED_TECH_PRODUCT_update](@code Varchar(10), @codeview Varchar(20), @name Nvarchar(200), @note Nvarchar(200), @lastedituser Varchar(20), @lastedittime Datetime, @lock smallint, @lockdate datetime, @theorder int, @teachercode Varchar(10), @Palce Nvachar(1000), @time date, @Appliedscale Nvachar(1000), @eficiency Nvachar(1000), @Key_code Varchar(10))
+CREATE PROCEDURE [gen_APPLIED_TECH_PRODUCT_update](@code Varchar(10), @codeview Varchar(20), @name Nvarchar(200), @note Nvarchar(200), @lastedituser Varchar(20), @lastedittime Datetime, @lock smallint, @lockdate datetime, @theorder int, @teachercode Varchar(10), @place Nvarchar(1000), @time date, @Appliedscale Nvarchar(1000), @eficiency Nvarchar(1000), @Key_code Varchar(10))
 AS 
 BEGIN
-	UPDATE [APPLIED_TECH_PRODUCT] SET [code] =@code, [codeview] =@codeview, [name] =@name, [note] =@note, [lastedituser] =@lastedituser, [lastedittime] =@lastedittime, [lock] =@lock, [lockdate] =@lockdate, [theorder] =@theorder, [teachercode] =@teachercode, [Palce] =@Palce, [time] =@time, [Appliedscale] =@Appliedscale, [eficiency] =@eficiency WHERE [code] =@Key_code
+	UPDATE [APPLIED_TECH_PRODUCT] SET [code] =@code, [codeview] =@codeview, [name] =@name, [note] =@note, [lastedituser] =@lastedituser, [lastedittime] =@lastedittime, [lock] =@lock, [lockdate] =@lockdate, [theorder] =@theorder, [teachercode] =@teachercode, [place] =@place, [time] =@time, [Appliedscale] =@Appliedscale, [eficiency] =@eficiency WHERE [code] =@Key_code
 END
 -----------------end APPLIED_TECH_PRODUCT_update--------------------
 GO
@@ -1947,7 +1947,7 @@ GO
 IF EXISTS (SELECT * FROM sys.objects WHERE type = 'P' AND name = 'gen_EXAMIN_HISTORY_insert')
     DROP PROCEDURE [gen_EXAMIN_HISTORY_insert]
 GO 
-CREATE PROCEDURE [gen_EXAMIN_HISTORY_insert](  @code Varchar(10),   @codeview Varchar(20),   @name Nvarchar(200),   @note Nvarchar(200),   @lastedituser Varchar(20),   @lastedittime Datetime,   @lock smallint,   @lockdate datetime,   @theorder int,   @teachercode varchar(10),   @teachername Nvarchar(200),   @examintypename Nvarchar(200),   @subjectname Nvarchar(200),   @classname Nvarchar(200),   @amountoftime date,   @subjectclassname Nvarchar(200),   @numberofstudent number,   @start date,   @end date)
+CREATE PROCEDURE [gen_EXAMIN_HISTORY_insert](  @code Varchar(10),   @codeview Varchar(20),   @name Nvarchar(200),   @note Nvarchar(200),   @lastedituser Varchar(20),   @lastedittime Datetime,   @lock smallint,   @lockdate datetime,   @theorder int,   @teachercode varchar(10),   @teachername Nvarchar(200),   @examintypename Nvarchar(200),   @subjectname Nvarchar(200),   @classname Nvarchar(200),   @amountoftime date,   @subjectclassname Nvarchar(200),   @numberofstudent int,   @start date,   @end date)
 AS 
 BEGIN
 	INSERT INTO [EXAMIN_HISTORY]([code], [codeview], [name], [note], [lastedituser], [lastedittime], [lock], [lockdate], [theorder], [teachercode], [teachername], [examintypename], [subjectname], [classname], [amountoftime], [subjectclassname], [numberofstudent], [start], [end]) VALUES(@code, @codeview, @name, @note, @lastedituser, @lastedittime, @lock, @lockdate, @theorder, @teachercode, @teachername, @examintypename, @subjectname, @classname, @amountoftime, @subjectclassname, @numberofstudent, @start, @end)
@@ -1959,7 +1959,7 @@ GO
 IF EXISTS (SELECT * FROM sys.objects WHERE type = 'P' AND name = 'gen_EXAMIN_HISTORY_update')
     DROP PROCEDURE [gen_EXAMIN_HISTORY_update]
 GO 
-CREATE PROCEDURE [gen_EXAMIN_HISTORY_update](@code Varchar(10), @codeview Varchar(20), @name Nvarchar(200), @note Nvarchar(200), @lastedituser Varchar(20), @lastedittime Datetime, @lock smallint, @lockdate datetime, @theorder int, @teachercode varchar(10), @teachername Nvarchar(200), @examintypename Nvarchar(200), @subjectname Nvarchar(200), @classname Nvarchar(200), @amountoftime date, @subjectclassname Nvarchar(200), @numberofstudent number, @start date, @end date, @Key_code Varchar(10))
+CREATE PROCEDURE [gen_EXAMIN_HISTORY_update](@code Varchar(10), @codeview Varchar(20), @name Nvarchar(200), @note Nvarchar(200), @lastedituser Varchar(20), @lastedittime Datetime, @lock smallint, @lockdate datetime, @theorder int, @teachercode varchar(10), @teachername Nvarchar(200), @examintypename Nvarchar(200), @subjectname Nvarchar(200), @classname Nvarchar(200), @amountoftime date, @subjectclassname Nvarchar(200), @numberofstudent int, @start date, @end date, @Key_code Varchar(10))
 AS 
 BEGIN
 	UPDATE [EXAMIN_HISTORY] SET [code] =@code, [codeview] =@codeview, [name] =@name, [note] =@note, [lastedituser] =@lastedituser, [lastedittime] =@lastedittime, [lock] =@lock, [lockdate] =@lockdate, [theorder] =@theorder, [teachercode] =@teachercode, [teachername] =@teachername, [examintypename] =@examintypename, [subjectname] =@subjectname, [classname] =@classname, [amountoftime] =@amountoftime, [subjectclassname] =@subjectclassname, [numberofstudent] =@numberofstudent, [start] =@start, [end] =@end WHERE [code] =@Key_code
@@ -2199,7 +2199,7 @@ GO
 IF EXISTS (SELECT * FROM sys.objects WHERE type = 'P' AND name = 'gen_RIGHT_insert')
     DROP PROCEDURE [gen_RIGHT_insert]
 GO 
-CREATE PROCEDURE [gen_RIGHT_insert](  @code Varchar(10),   @codeview Varchar(20),   @name Nvarchar(200),   @note Nvarchar(200),   @lastedituser Varchar(20),   @lastedittime Datetime,   @lock smallint,   @lockdate datetime,   @theorder int,   @rightgroupcode varchar(10),   @linkpath Varchar(20),   @isCreate smaillint,   @isUpdate smaillint,   @isDelete smaillint,   @description Nvarchar(300))
+CREATE PROCEDURE [gen_RIGHT_insert](  @code Varchar(10),   @codeview Varchar(20),   @name Nvarchar(200),   @note Nvarchar(200),   @lastedituser Varchar(20),   @lastedittime Datetime,   @lock smallint,   @lockdate datetime,   @theorder int,   @rightgroupcode varchar(10),   @linkpath Varchar(20),   @isCreate smallint,   @isUpdate smallint,   @isDelete smallint,   @description Nvarchar(300))
 AS 
 BEGIN
 	INSERT INTO [RIGHT]([code], [codeview], [name], [note], [lastedituser], [lastedittime], [lock], [lockdate], [theorder], [rightgroupcode], [linkpath], [isCreate], [isUpdate], [isDelete], [description]) VALUES(@code, @codeview, @name, @note, @lastedituser, @lastedittime, @lock, @lockdate, @theorder, @rightgroupcode, @linkpath, @isCreate, @isUpdate, @isDelete, @description)
@@ -2211,7 +2211,7 @@ GO
 IF EXISTS (SELECT * FROM sys.objects WHERE type = 'P' AND name = 'gen_RIGHT_update')
     DROP PROCEDURE [gen_RIGHT_update]
 GO 
-CREATE PROCEDURE [gen_RIGHT_update](@code Varchar(10), @codeview Varchar(20), @name Nvarchar(200), @note Nvarchar(200), @lastedituser Varchar(20), @lastedittime Datetime, @lock smallint, @lockdate datetime, @theorder int, @rightgroupcode varchar(10), @linkpath Varchar(20), @isCreate smaillint, @isUpdate smaillint, @isDelete smaillint, @description Nvarchar(300), @Key_code Varchar(10))
+CREATE PROCEDURE [gen_RIGHT_update](@code Varchar(10), @codeview Varchar(20), @name Nvarchar(200), @note Nvarchar(200), @lastedituser Varchar(20), @lastedittime Datetime, @lock smallint, @lockdate datetime, @theorder int, @rightgroupcode varchar(10), @linkpath Varchar(20), @isCreate smallint, @isUpdate smallint, @isDelete smallint, @description Nvarchar(300), @Key_code Varchar(10))
 AS 
 BEGIN
 	UPDATE [RIGHT] SET [code] =@code, [codeview] =@codeview, [name] =@name, [note] =@note, [lastedituser] =@lastedituser, [lastedittime] =@lastedittime, [lock] =@lock, [lockdate] =@lockdate, [theorder] =@theorder, [rightgroupcode] =@rightgroupcode, [linkpath] =@linkpath, [isCreate] =@isCreate, [isUpdate] =@isUpdate, [isDelete] =@isDelete, [description] =@description WHERE [code] =@Key_code

@@ -244,8 +244,8 @@ CREATE TABLE [SUBJECT_CLASS]
   [theorder] int NULL,
   [numberof] int NULL,
   [subjectcode] varchar(10) NULL,
-  [yearstart] date NULL,
-  [yearend] date NULL,
+  [start] date NULL,
+  [end] date NULL,
   [edubranchcode] Varchar(10) NULL,
   [Semester] int NULL,
   [yearstart] int NULL,
@@ -376,21 +376,12 @@ CREATE TABLE [MENTORING_TYPE]
   [theorder] int NULL,
   [edulevelcode] Nvarchar(10) NULL,
   [standartquantity] int NULL,
-  [code] Varchar(10) NOT NULL,
-  [codeview] Varchar(20) NULL,
-  [name] Nvarchar(200) NULL,
-  [note] Nvarchar(200) NULL,
-  [lastedituser] Varchar(20) NULL,
-  [lastedittime] Datetime NULL,
-  [lock] smallint NULL,
-  [lockdate] datetime NULL,
-  [theorder] int NULL,
   [coefficent] float NULL,
 
     CONSTRAINT [PK_MENTORING_TYPE_MY] PRIMARY KEY CLUSTERED 
     (
         [code] ASC
-        ,[code] ASC
+        
 
     ) ON [PRIMARY]
 )
@@ -483,21 +474,12 @@ CREATE TABLE [MENTORING_TYPE]
   [theorder] int NULL,
   [edulevelcode] Nvarchar(10) NULL,
   [standartquantity] int NULL,
-  [code] Varchar(10) NOT NULL,
-  [codeview] Varchar(20) NULL,
-  [name] Nvarchar(200) NULL,
-  [note] Nvarchar(200) NULL,
-  [lastedituser] Varchar(20) NULL,
-  [lastedittime] Datetime NULL,
-  [lock] smallint NULL,
-  [lockdate] datetime NULL,
-  [theorder] int NULL,
   [coefficent] float NULL,
 
     CONSTRAINT [PK_MENTORING_TYPE_MY] PRIMARY KEY CLUSTERED 
     (
         [code] ASC
-        ,[code] ASC
+       
 
     ) ON [PRIMARY]
 )
@@ -1019,15 +1001,6 @@ CREATE TABLE [ACADEMIC_RANK]
   [lockdate] datetime NULL,
   [theorder] int NULL,
   [quotahour] int NULL,
-  [code] Varchar(10) NOT NULL,
-  [codeview] Varchar(20) NULL,
-  [name] Nvarchar(200) NULL,
-  [note] Nvarchar(200) NULL,
-  [lastedituser] Varchar(20) NULL,
-  [lastedittime] Datetime NULL,
-  [lock] smallint NULL,
-  [lockdate] datetime NULL,
-  [theorder] int NULL,
   [Researchtitlecode] varchar(10) NULL,
   [teachercode] varchar(10) NULL,
   [place] Nvarchar(1000) NULL,
@@ -1036,7 +1009,7 @@ CREATE TABLE [ACADEMIC_RANK]
     CONSTRAINT [PK_ACADEMIC_RANK_MY] PRIMARY KEY CLUSTERED 
     (
         [code] ASC
-        ,[code] ASC
+      
 
     ) ON [PRIMARY]
 )
@@ -1124,7 +1097,7 @@ CREATE TABLE [DT_DEGREE]
   [theorder] int NULL,
   [degreecode] varchar(10) NULL,
   [teachercode] varchar(10) NULL,
-  [place] Nvarchaer(1000) NULL,
+  [place] Nvarchar(1000) NULL,
   [time] date NULL,
 
     CONSTRAINT [PK_DT_DEGREE_MY] PRIMARY KEY CLUSTERED 
@@ -1186,7 +1159,7 @@ CREATE TABLE [DT_PARTY_POST]
   [theorder] int NULL,
   [Partypostcode] varchar(10) NULL,
   [teachercode] varchar(10) NULL,
-  [place] Nvarchaer(1000) NULL,
+  [place] Nvarchar(1000) NULL,
   [start] date NULL,
   [end] date NULL,
   [facultycode] Varchar(10) NULL,
@@ -1251,7 +1224,7 @@ CREATE TABLE [DT_ADMINISTRATIVE_POST]
   [theorder] int NULL,
   [Administrativepostcode] varchar(10) NULL,
   [teachercode] varchar(10) NULL,
-  [place] Nvarchaer(1000) NULL,
+  [place] Nvarchar(1000) NULL,
   [start] date NULL,
   [end] date NULL,
   [facultycode] Varchar(10) NULL,
@@ -1316,15 +1289,6 @@ CREATE TABLE [ACADEMIC_RANK]
   [lockdate] datetime NULL,
   [theorder] int NULL,
   [quotahour] int NULL,
-  [code] Varchar(10) NOT NULL,
-  [codeview] Varchar(20) NULL,
-  [name] Nvarchar(200) NULL,
-  [note] Nvarchar(200) NULL,
-  [lastedituser] Varchar(20) NULL,
-  [lastedittime] Datetime NULL,
-  [lock] smallint NULL,
-  [lockdate] datetime NULL,
-  [theorder] int NULL,
   [Researchtitlecode] varchar(10) NULL,
   [teachercode] varchar(10) NULL,
   [place] Nvarchar(1000) NULL,
@@ -1333,7 +1297,7 @@ CREATE TABLE [ACADEMIC_RANK]
     CONSTRAINT [PK_ACADEMIC_RANK_MY] PRIMARY KEY CLUSTERED 
     (
         [code] ASC
-        ,[code] ASC
+      
 
     ) ON [PRIMARY]
 )
@@ -1518,10 +1482,10 @@ CREATE TABLE [APPLIED_TECH_PRODUCT]
   [lockdate] datetime NULL,
   [theorder] int NULL,
   [teachercode] Varchar(10) NULL,
-  [Palce] Nvachar(1000) NULL,
+  [place] Nvarchar(1000) NULL,
   [time] date NULL,
-  [Appliedscale] Nvachar(1000) NULL,
-  [eficiency] Nvachar(1000) NULL,
+  [Appliedscale] Nvarchar(1000) NULL,
+  [eficiency] Nvarchar(1000) NULL,
 
     CONSTRAINT [PK_APPLIED_TECH_PRODUCT_MY] PRIMARY KEY CLUSTERED 
     (
@@ -1657,17 +1621,6 @@ CREATE TABLE [RESEARCH_HISTORY]
   [amountofauthor] int NULL,
   [amountoftime] date NULL,
   [workloadname] Nvarchar(200) NULL,
-  [code] Varchar(10) NOT NULL,
-  [codeview] Varchar(20) NULL,
-  [name] Nvarchar(200) NULL,
-  [note] Nvarchar(200) NULL,
-  [lastedituser] Varchar(20) NULL,
-  [lastedittime] Datetime NULL,
-  [lock] smallint NULL,
-  [lockdate] datetime NULL,
-  [theorder] int NULL,
-  [teachercode] varchar(10) NULL,
-  [teachername] Nvarchar(200) NULL,
   [postname] Nvarchar(200) NULL,
   [place] Nvarchar(200) NULL,
   [tenure] int NULL,
@@ -1677,7 +1630,7 @@ CREATE TABLE [RESEARCH_HISTORY]
     CONSTRAINT [PK_RESEARCH_HISTORY_MY] PRIMARY KEY CLUSTERED 
     (
         [code] ASC
-        ,[code] ASC
+    
 
     ) ON [PRIMARY]
 )
@@ -1709,17 +1662,7 @@ CREATE TABLE [RESEARCH_HISTORY]
   [amountofauthor] int NULL,
   [amountoftime] date NULL,
   [workloadname] Nvarchar(200) NULL,
-  [code] Varchar(10) NOT NULL,
-  [codeview] Varchar(20) NULL,
-  [name] Nvarchar(200) NULL,
-  [note] Nvarchar(200) NULL,
-  [lastedituser] Varchar(20) NULL,
-  [lastedittime] Datetime NULL,
-  [lock] smallint NULL,
-  [lockdate] datetime NULL,
-  [theorder] int NULL,
-  [teachercode] varchar(10) NULL,
-  [teachername] Nvarchar(200) NULL,
+
   [postname] Nvarchar(200) NULL,
   [place] Nvarchar(200) NULL,
   [tenure] int NULL,
@@ -1729,7 +1672,7 @@ CREATE TABLE [RESEARCH_HISTORY]
     CONSTRAINT [PK_RESEARCH_HISTORY_MY] PRIMARY KEY CLUSTERED 
     (
         [code] ASC
-        ,[code] ASC
+       
 
     ) ON [PRIMARY]
 )
@@ -1840,7 +1783,7 @@ CREATE TABLE [EXAMIN_HISTORY]
   [classname] Nvarchar(200) NULL,
   [amountoftime] date NULL,
   [subjectclassname] Nvarchar(200) NULL,
-  [numberofstudent] number NULL,
+  [numberofstudent] int NULL,
   [start] date NULL,
   [end] date NULL,
 
@@ -2084,9 +2027,9 @@ CREATE TABLE [RIGHT]
   [theorder] int NULL,
   [rightgroupcode] varchar(10) NULL,
   [linkpath] Varchar(20) NULL,
-  [isCreate] smaillint NULL,
-  [isUpdate] smaillint NULL,
-  [isDelete] smaillint NULL,
+  [isCreate] smallint NULL,
+  [isUpdate] smallint NULL,
+  [isDelete] smallint NULL,
   [description] Nvarchar(300) NULL,
 
     CONSTRAINT [PK_RIGHT_MY] PRIMARY KEY CLUSTERED 
