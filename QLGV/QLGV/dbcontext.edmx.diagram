@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="36fd74b5b1df4117a49582a4305f5ad7" Name="Diagram1">
+        <EntityTypeShape EntityType="QLGVModel.ACADEMIC_RANK" Width="1.5" PointX="0.75" PointY="84" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLGVModel.ACCOUNT" Width="1.5" PointX="3" PointY="6" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLGVModel.ADMINISTRATIVE_POST" Width="1.5" PointX="3.75" PointY="62.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLGVModel.APPLIED_TECH_PRODUCT" Width="1.5" PointX="3" PointY="43.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLGVModel.AWARD" Width="1.5" PointX="0.75" PointY="68.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLGVModel.BOOK" Width="1.5" PointX="0.75" PointY="63.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLGVModel.BOOK_HISTORY" Width="1.5" PointX="3" PointY="48.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLGVModel.BOOK_TYPE" Width="1.5" PointX="1.5" PointY="58.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLGVModel.CLASS" Width="1.5" PointX="9.75" PointY="88.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLGVModel.COUNCIL" Width="1.5" PointX="4.5" PointY="94" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLGVModel.COUNCIL_HISTORY" Width="1.5" PointX="3" PointY="53.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLGVModel.COUNCIL_ROLE" Width="1.5" PointX="6.75" PointY="61.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLGVModel.COUNCIL_TYPE" Width="1.5" PointX="2.25" PointY="94.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLGVModel.DEGREE" Width="1.5" PointX="3.75" PointY="66.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLGVModel.DEPARTMENT" Width="1.5" PointX="3.75" PointY="89" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLGVModel.DT_ACADEMIC_RANK" Width="1.5" PointX="3" PointY="76" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLGVModel.DT_ADMINISTRATIVE_POST" Width="1.5" PointX="6" PointY="75.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLGVModel.DT_AWARD" Width="1.5" PointX="3" PointY="71.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLGVModel.DT_BOOK" Width="1.5" PointX="3" PointY="80.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLGVModel.DT_Council" Width="1.5" PointX="9" PointY="75.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLGVModel.DT_DEGREE" Width="1.5" PointX="6" PointY="70" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLGVModel.DT_DEPARTMENT" Width="1.5" PointX="6" PointY="81.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLGVModel.DT_EXAMIN" Width="1.5" PointX="9" PointY="69.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLGVModel.DT_MENTORING" Width="1.5" PointX="14.25" PointY="73.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLGVModel.DT_PARTY_POST" Width="1.5" PointX="9" PointY="81.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLGVModel.DT_PUNISHMENT" Width="1.5" PointX="12" PointY="76.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLGVModel.DT_RESEARCH" Width="1.5" PointX="12" PointY="70.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLGVModel.DT_RESEARCH_TITLE" Width="1.5" PointX="12" PointY="81" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLGVModel.DT_RIGHT" Width="1.5" PointX="6" PointY="6" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLGVModel.DT_SUBJECT_CLASS" Width="1.5" PointX="17.25" PointY="72.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLGVModel.DT_TEACHING" Width="1.5" PointX="14.25" PointY="67.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLGVModel.EDU_BRANCH" Width="1.5" PointX="9.75" PointY="56.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLGVModel.EDUCATION_PROCESS" Width="1.5" PointX="3" PointY="119.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLGVModel.EDULEVEL" Width="1.5" PointX="7.5" PointY="56.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLGVModel.EXAMIN_HISTORY_" Width="1.5" PointX="3" PointY="125.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLGVModel.EXAMIN_TYPE" Width="1.5" PointX="6.75" PointY="65.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLGVModel.FACULTY" Width="1.5" PointX="1.5" PointY="89" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLGVModel.FACULTY_HISTORY" Width="1.5" PointX="3.75" PointY="99" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLGVModel.LOAD_BY_SEMESTER" Width="1.5" PointX="3" PointY="131.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLGVModel.LOAD_STATISTIC" Width="1.5" PointX="3" PointY="136.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLGVModel.MENTORING_HISTORY" Width="1.5" PointX="3" PointY="142.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLGVModel.MENTORING_TYPE" Width="1.5" PointX="9.75" PointY="93" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLGVModel.OTHER_BUSINESS" Width="1.5" PointX="3" PointY="148.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLGVModel.PARTY_POST" Width="1.5" PointX="6.75" PointY="87.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLGVModel.PUNISHMENT" Width="1.5" PointX="9.75" PointY="97.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLGVModel.REAL_COUNCIL" Width="1.5" PointX="6.75" PointY="94" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLGVModel.RESEARCH" Width="1.5" PointX="9.75" PointY="50.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLGVModel.RESEARCH_HISTORY" Width="1.5" PointX="3" PointY="152.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLGVModel.RESEARCH_ROLE" Width="1.5" PointX="9.75" PointY="64.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLGVModel.RESEARCH_TITLE" Width="1.5" PointX="9.75" PointY="101.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLGVModel.RESEARCH_TYPE" Width="1.5" PointX="7.5" PointY="51.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLGVModel.RIGHT" Width="1.5" PointX="3.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLGVModel.RIGHT_GROUP" Width="1.5" PointX="0.75" PointY="6.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLGVModel.STUDENT" Width="1.5" PointX="12" PointY="87.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLGVModel.SUBJECT" Width="1.5" PointX="9.75" PointY="60.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLGVModel.SUBJECT_CLASS" Width="1.5" PointX="12" PointY="57.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLGVModel.sysdiagram" Width="1.5" PointX="0.75" PointY="10.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLGVModel.TEACHER" Width="1.5" PointX="0.75" PointY="73.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLGVModel.TEACHER_HISTORY" Width="1.5" PointX="3" PointY="158.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLGVModel.TEACHING_HISTORY" Width="1.5" PointX="3" PointY="163.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLGVModel.TEACHING_TYPE" Width="1.5" PointX="12" PointY="65.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLGVModel.TECH_AWARD" Width="1.5" PointX="3" PointY="169.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLGVModel.THESIS" Width="1.5" PointX="12" PointY="93.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLGVModel.WORKLOAD_TYPE" Width="1.5" PointX="5.25" PointY="51.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLGVModel.WRITING_ROLE" Width="1.5" PointX="0.75" PointY="98.75" IsExpanded="true" />
+        <AssociationConnector Association="QLGVModel.FK_DT_ACADEMIC_RANK_ACADEMIC_RANK" ManuallyRouted="false" />
+        <AssociationConnector Association="QLGVModel.FK_ACCOUNT_RIGHT_GROUP" ManuallyRouted="false" />
+        <AssociationConnector Association="QLGVModel.FK_DT_ADMINISTRATIVE_POST_ADMINISTRATIVE_POST" ManuallyRouted="false" />
+        <AssociationConnector Association="QLGVModel.FK_APPLIED_TECH_PRODUCT_TEACHER" ManuallyRouted="false" />
+        <AssociationConnector Association="QLGVModel.FK_DT_AWARD_AWARD" ManuallyRouted="false" />
+        <AssociationConnector Association="QLGVModel.FK_BOOK_BOOK_TYPE" ManuallyRouted="false" />
+        <AssociationConnector Association="QLGVModel.FK_DT_BOOK_BOOK" ManuallyRouted="false" />
+        <AssociationConnector Association="QLGVModel.FK_BOOK_HISTORY_TEACHER" ManuallyRouted="false" />
+        <AssociationConnector Association="QLGVModel.FK_CLASS_EDU_BRANCH" ManuallyRouted="false" />
+        <AssociationConnector Association="QLGVModel.FK_STUDENT_CLASS" ManuallyRouted="false" />
+        <AssociationConnector Association="QLGVModel.FK_COUNCIL_COUNCIL_TYPE" ManuallyRouted="false" />
+        <AssociationConnector Association="QLGVModel.FK_REAL_COUNCIL_COUNCIL" ManuallyRouted="false" />
+        <AssociationConnector Association="QLGVModel.FK_COUNCIL_HISTORY_TEACHER" ManuallyRouted="false" />
+        <AssociationConnector Association="QLGVModel.FK_DT_Council_COUNCIL_ROLE" ManuallyRouted="false" />
+        <AssociationConnector Association="QLGVModel.FK_DT_DEGREE_DEGREE" ManuallyRouted="false" />
+        <AssociationConnector Association="QLGVModel.FK_DEPARTMENT_FACULTY" ManuallyRouted="false" />
+        <AssociationConnector Association="QLGVModel.FK_DT_ADMINISTRATIVE_POST_DEPARTMENT" ManuallyRouted="false" />
+        <AssociationConnector Association="QLGVModel.FK_DT_DEPARTMENT_DEPARTMENT" ManuallyRouted="false" />
+        <AssociationConnector Association="QLGVModel.FK_DT_PARTY_POST_DEPARTMENT" ManuallyRouted="false" />
+        <AssociationConnector Association="QLGVModel.FK_DT_ACADEMIC_RANK_TEACHER" ManuallyRouted="false" />
+        <AssociationConnector Association="QLGVModel.FK_DT_ADMINISTRATIVE_POST_FACULTY" ManuallyRouted="false" />
+        <AssociationConnector Association="QLGVModel.FK_DT_ADMINISTRATIVE_POST_TEACHER" ManuallyRouted="false" />
+        <AssociationConnector Association="QLGVModel.FK_DT_AWARD_TEACHER" ManuallyRouted="false" />
+        <AssociationConnector Association="QLGVModel.FK_DT_BOOK_TEACHER" ManuallyRouted="false" />
+        <AssociationConnector Association="QLGVModel.FK_DT_BOOK_WRITING_ROLE" ManuallyRouted="false" />
+        <AssociationConnector Association="QLGVModel.FK_DT_Council_REAL_COUNCIL" ManuallyRouted="false" />
+        <AssociationConnector Association="QLGVModel.FK_DT_Council_TEACHER" ManuallyRouted="false" />
+        <AssociationConnector Association="QLGVModel.FK_DT_DEGREE_TEACHER" ManuallyRouted="false" />
+        <AssociationConnector Association="QLGVModel.FK_DT_DEPARTMENT_TEACHER" ManuallyRouted="false" />
+        <AssociationConnector Association="QLGVModel.FK_DT_EXAMIN_EXAMIN_TYPE" ManuallyRouted="false" />
+        <AssociationConnector Association="QLGVModel.FK_DT_EXAMIN_TEACHER" ManuallyRouted="false" />
+        <AssociationConnector Association="QLGVModel.FK_DT_MENTORING_DT_EXAMIN" ManuallyRouted="false" />
+        <AssociationConnector Association="QLGVModel.FK_DT_TEACHING_DT_EXAMIN" ManuallyRouted="false" />
+        <AssociationConnector Association="QLGVModel.FK_DT_MENTORING_STUDENT" ManuallyRouted="false" />
+        <AssociationConnector Association="QLGVModel.FK_DT_MENTORING_TEACHER" ManuallyRouted="false" />
+        <AssociationConnector Association="QLGVModel.FK_DT_MENTORING_THESIS" ManuallyRouted="false" />
+        <AssociationConnector Association="QLGVModel.FK_DT_PARTY_POST_FACULTY" ManuallyRouted="false" />
+        <AssociationConnector Association="QLGVModel.FK_DT_PARTY_POST_PARTY_POST" ManuallyRouted="false" />
+        <AssociationConnector Association="QLGVModel.FK_DT_PARTY_POST_TEACHER" ManuallyRouted="false" />
+        <AssociationConnector Association="QLGVModel.FK_DT_PUNISHMENT_PUNISHMENT" ManuallyRouted="false" />
+        <AssociationConnector Association="QLGVModel.FK_DT_PUNISHMENT_TEACHER" ManuallyRouted="false" />
+        <AssociationConnector Association="QLGVModel.FK_DT_RESEARCH_RESEARCH" ManuallyRouted="false" />
+        <AssociationConnector Association="QLGVModel.FK_DT_RESEARCH_RESEARCH_ROLE" ManuallyRouted="false" />
+        <AssociationConnector Association="QLGVModel.FK_DT_RESEARCH_TEACHER" ManuallyRouted="false" />
+        <AssociationConnector Association="QLGVModel.FK_DT_RESEARCH_TITLE_RESEARCH_TITLE" ManuallyRouted="false" />
+        <AssociationConnector Association="QLGVModel.FK_DT_RESEARCH_TITLE_TEACHER" ManuallyRouted="false" />
+        <AssociationConnector Association="QLGVModel.FK_DT_RIGHT_RIGHT" ManuallyRouted="false" />
+        <AssociationConnector Association="QLGVModel.FK_DT_RIGHT_RIGHT_GROUP" ManuallyRouted="false" />
+        <AssociationConnector Association="QLGVModel.FK_DT_SUBJECT_CLASS_STUDENT" ManuallyRouted="false" />
+        <AssociationConnector Association="QLGVModel.FK_DT_SUBJECT_CLASS_SUBJECT_CLASS" ManuallyRouted="false" />
+        <AssociationConnector Association="QLGVModel.FK_DT_TEACHING_SUBJECT_CLASS" ManuallyRouted="false" />
+        <AssociationConnector Association="QLGVModel.FK_DT_TEACHING_TEACHER" ManuallyRouted="false" />
+        <AssociationConnector Association="QLGVModel.FK_DT_TEACHING_TEACHING_TYPE1" ManuallyRouted="false" />
+        <AssociationConnector Association="QLGVModel.FK_EDU_BRANCH_EDULEVEL" ManuallyRouted="false" />
+        <AssociationConnector Association="QLGVModel.FK_SUBJECT_CLASS_EDU_BRANCH" ManuallyRouted="false" />
+        <AssociationConnector Association="QLGVModel.FK_EDUCATION_PROCESS_TEACHER" ManuallyRouted="false" />
+        <AssociationConnector Association="QLGVModel.FK_MENTORING_TYPE_EDULEVEL" ManuallyRouted="false" />
+        <AssociationConnector Association="QLGVModel.FK_EXAMIN_HISTORY_TEACHER" ManuallyRouted="false" />
+        <AssociationConnector Association="QLGVModel.FK_FACULTY_HISTORY_FACULTY" ManuallyRouted="false" />
+        <AssociationConnector Association="QLGVModel.FK_LOAD_BY_SEMESTER_TEACHER" ManuallyRouted="false" />
+        <AssociationConnector Association="QLGVModel.FK_LOAD_STATISTIC_TEACHER" ManuallyRouted="false" />
+        <AssociationConnector Association="QLGVModel.FK_MENTORING_HISTORY_TEACHER" ManuallyRouted="false" />
+        <AssociationConnector Association="QLGVModel.FK_THESIS_MENTORING_TYPE" ManuallyRouted="false" />
+        <AssociationConnector Association="QLGVModel.FK_OTHER_BUSINESS_TEACHER" ManuallyRouted="false" />
+        <AssociationConnector Association="QLGVModel.FK_RESEARCH_RESEARCH_TYPE" ManuallyRouted="false" />
+        <AssociationConnector Association="QLGVModel.FK_RESEARCH_HISTORY_TEACHER" ManuallyRouted="false" />
+        <AssociationConnector Association="QLGVModel.FK_RESEARCH_ROLE_WORKLOAD_TYPE" ManuallyRouted="false" />
+        <AssociationConnector Association="QLGVModel.FK_RESEARCH_TYPE_WORKLOAD_TYPE" ManuallyRouted="false" />
+        <AssociationConnector Association="QLGVModel.FK_SUBJECT_CLASS_SUBJECT" ManuallyRouted="false" />
+        <AssociationConnector Association="QLGVModel.FK_TEACHER_HISTORY_TEACHER" ManuallyRouted="false" />
+        <AssociationConnector Association="QLGVModel.FK_TEACHING_HISTORY_TEACHER" ManuallyRouted="false" />
+        <AssociationConnector Association="QLGVModel.FK_TECH_AWARD_TEACHER" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -7,3 +7,6 @@ c:\users\pc\documents\visual studio 2015\Projects\QLGV\QLGV\obj\Debug\QLGV.Prope
 c:\users\pc\documents\visual studio 2015\Projects\QLGV\QLGV\obj\Debug\QLGV.csproj.GenerateResource.Cache
 c:\users\pc\documents\visual studio 2015\Projects\QLGV\QLGV\obj\Debug\QLGV.exe
 c:\users\pc\documents\visual studio 2015\Projects\QLGV\QLGV\obj\Debug\QLGV.pdb
+C:\Users\PC\Desktop\CSDL_nangcao_2019\QLGV\QLGV\bin\Debug\QLGV.exe.config
+C:\Users\PC\Desktop\CSDL_nangcao_2019\QLGV\QLGV\obj\Debug\QLGV.exe
+C:\Users\PC\Desktop\CSDL_nangcao_2019\QLGV\QLGV\obj\Debug\QLGV.pdb
